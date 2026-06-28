@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+"""CPYCMS - CMS URL。"""
+
+from django.urls import path
+
+from backend.apps.cms import views
+
+
+urlpatterns = [
+    path('init/check/', views.init_check),
+    path('init/setup/', views.init_setup),
+    path('site/info/', views.site_info),
+    path('site/bootstrap/', views.site_bootstrap),
+    path('site/categories/', views.categories),
+    path('site/tags/', views.tags),
+    path('articles/', views.articles),
+    path('articles/search/', views.article_search),
+    path('articles/hot/', views.article_hot),
+    path('articles/<slug:slug>/', views.article_detail),
+    path('articles/<slug:slug>/like/', views.article_like),
+    path('articles/<slug:slug>/comments/', views.article_comments),
+    path('articles/<slug:slug>/comments/create/', views.article_comment_create),
+    path('works/', views.works),
+    path('works/search/', views.work_search),
+    path('works/<int:work_id>/', views.work_detail),
+    path('works/<int:work_id>/like/', views.work_like),
+    path('resources/', views.resources),
+    path('resources/search/', views.resource_search),
+    path('resources/<int:resource_id>/download/', views.resource_download),
+    path('messages/', views.messages),
+    path('messages/create/', views.message_create),
+    path('admin/articles/', views.admin_articles),
+    path('admin/articles/create/', views.admin_article_create),
+    path('admin/articles/<int:article_id>/', views.admin_article_detail),
+    path('admin/categories/', views.admin_categories),
+    path('admin/categories/<int:category_id>/', views.admin_category_detail),
+    path('admin/tags/', views.admin_tags),
+    path('admin/tags/<int:tag_id>/', views.admin_tag_detail),
+    path('admin/works/', views.admin_works),
+    path('admin/works/<int:work_id>/', views.admin_work_detail),
+    path('admin/resources/', views.admin_resources),
+    path('admin/resources/<int:resource_id>/', views.admin_resource_detail),
+    path('admin/messages/', views.admin_messages),
+    path('admin/messages/<int:message_id>/approve/', views.admin_message_approve),
+    path('admin/messages/<int:message_id>/reply/', views.admin_message_reply),
+    path('admin/messages/<int:message_id>/', views.admin_message_delete),
+    path('admin/comments/', views.admin_comments),
+    path('admin/comments/<int:comment_id>/approve/', views.admin_comment_approve),
+    path('admin/comments/<int:comment_id>/reply/', views.admin_comment_reply),
+    path('admin/comments/<int:comment_id>/', views.admin_comment_delete),
+    path('admin/upload/image/', views.upload_image),
+    path('admin/upload/article-cover/', views.upload_article_cover),
+    path('admin/upload/work-cover/', views.upload_work_cover),
+    path('admin/upload/site-logo/', views.upload_site_logo),
+    path('admin/settings/', views.admin_settings),
+    path('admin/stats/', views.admin_stats),
+]

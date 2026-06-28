@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+.npm
+*.log
+
+# Runtime Data & Database
+*.db
+*.sqlite3
+cpycms.db*
+uploads/
+logs/
+
+# Environment & Credentials
+.env
+backend/.env
+frontend/.env.local
+*.pem
+*.key
+
+# IDE / Editor / System
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.playwright-mcp/
+.agents/
+scratch/
